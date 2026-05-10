@@ -20,6 +20,8 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
+from pathlib import Path
+
 
 
 FEATURES = ["flux_lmh", "sdi", "tds_mg_L", "temperature_c"]
@@ -119,7 +121,9 @@ def plot_predictions(y_test, y_pred, metrics: dict) -> None:
     ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("outputs/model_evaluation.png", dpi=150, bbox_inches="tight")
+    output_dir = Path(__file__).resolve().parent.parent / "outputs"
+    output_dir.mkdir(exist_ok=True)
+    plt.savefig(output_dir / "model_evaluation.png", dpi=150, bbox_inches="tight")
     plt.show()
     print("Guardado: outputs/model_evaluation.png")
 

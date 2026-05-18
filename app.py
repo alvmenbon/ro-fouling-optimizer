@@ -62,7 +62,7 @@ st.sidebar.markdown("""
 **RO Fouling Optimizer** is an open source tool for process engineers 
 working on seawater desalination projects.
 
-Built by **Álvaro Menéndez**, Process Engineer specialized 
+Built by **Álvaro Mendoza**, Process Engineer specialized 
 in water treatment and desalination.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/alvaro-mendoza-bonilla)
